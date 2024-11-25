@@ -1,3 +1,6 @@
+/* -------------------------
+   Global Styles
+------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -7,73 +10,657 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
+    padding: 0;
+    margin: 0;
 }
 
-header.hero {
-    background: #0073e6;
+/* -------------------------
+   Header Section
+------------------------- */
+.header {
+    background: rgb(127, 0, 255); /* Cor inicial do gradiente */
+    background: linear-gradient(
+        90deg,
+        rgba(127, 0, 255, 1) 0%,
+        rgba(225, 0, 255, 1) 50%,
+        rgba(127, 0, 255, 1) 100%
+    ); /* Gradiente RGB para o fundo */
     color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 30px 0; /* Mais espaçamento interno */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra no header */
 }
 
-.navbar {
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Espaçamento nas laterais */
 }
 
+/* Logo */
+.logo {
+    font-size: 2rem; /* Aumentei o tamanho da fonte */
+    font-weight: bold;
+    letter-spacing: 1px; /* Adicionei espaçamento entre as letras */
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 25px; /* Mais espaçamento entre os itens do menu */
 }
 
-.nav-links a {
+.nav-links li a {
+    color: #fff;
     text-decoration: none;
-    color: #fff;
-}
-
-.hero-content {
-    margin-top: 2rem;
-}
-
-.section {
-    padding: 2rem 1rem;
-    text-align: center;
-    background: #fff;
-    margin: 1rem auto;
-    max-width: 800px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    background: #0073e6;
-    color: #fff;
     font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: rgba(225, 255, 255, 0.8); /* Cor levemente mais clara ao passar o mouse */
+}
+
+/* Botões do Header */
+.header-buttons .btn {
     border: none;
+    padding: 12px 25px; /* Botões maiores */
+    border-radius: 25px; /* Botões arredondados */
+    margin-left: 15px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Botão 'Sign In' */
+.btn.sign-in {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff; /* Bordas mais grossas */
+}
+
+.btn.sign-in:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semitransparente ao passar o mouse */
+}
+
+/* Botão 'Free Trial' */
+.btn.trial {
+    background-color: #fff;
+    color: #7f00ff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra no botão */
+}
+
+.btn.trial:hover {
+    background-color: rgba(127, 0, 255, 0.8); /* Cor de fundo mais forte ao passar o mouse */
+    color: #fff; /* Texto branco */
+    box-shadow: 0px 6px 12px rgba(127, 0, 255, 0.4); /* Sombra mais forte */
+    transform: translateY(-2px); /* Leve elevação */
+}
+
+/* -------------------------
+   Hero Section
+------------------------- */
+.hero {
+    text-align: center;
+    padding: 50px 15px; /* Espaçamento interno do hero */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+}
+
+.hero .btn {
+    background: #fff;
+    color: #7f00ff;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-form button:hover {
-    background: #005bb5;
+/* -------------------------
+   Trusted Brands Section
+------------------------- */
+.brands {
+    padding: 30px 15px;
+    text-align: center;
 }
 
-.footer {
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os logos */
+    list-style: none;
+}
+
+.brand-logos li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7f00ff;
+}
+
+/* -------------------------
+   Search Courses Section
+------------------------- */
+.search-courses {
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
+    padding: 50px 20px;
     text-align: center;
-    padding: 1rem;
-    background: #333;
+}
+
+.search-courses h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Espaçamento abaixo da barra de busca */
+    gap: 10px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    background-color: #7f00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background-color: #5d00cc;
+}
+
+/* Benefícios com Ícones (Google Material Icons) */
+.benefits-list {
+    list-style: none; /* Remove as bolinhas padrão da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0;
+}
+
+.benefits-list li {
+    display: flex; /* Para alinhar o ícone e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente o ícone com o texto */
+    margin-bottom: 20px; /* Espaçamento entre os itens da lista */
+    font-size: 1.1rem; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+.benefits-list li .material-icons {
+    font-size: 30px; /* Tamanho do ícone */
+    color: #7f00ff; /* Cor padrão do ícone */
+    margin-right: 15px; /* Espaçamento entre o ícone e o texto */
+    transition: color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
+}
+
+.benefits-list li:hover .material-icons {
+    color: #e100ff; /* Cor do ícone ao passar o mouse */
+}
+
+.benefits-list li:hover {
+    color: #555; /* Texto mais escuro ao passar o mouse */
+}
+
+/* -------------------------
+   Imagem e Nome (WorkSphere)
+------------------------- */
+.features-image img {
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+    border: none; /* Remove bordas padrão */
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    height: auto;
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 15px; /* Espaçamento entre a imagem e o texto */
+    background: linear-gradient(90deg, #7f00ff, #e100ff, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s infinite; /* Aplica a animação de piscar */
+}
+
+/* Animação de Piscar */
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* -------------------------
+   Features Section
+------------------------- */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px; /* Espaçamento acima da seção */
+}
+
+.features-image {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+.features-img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features-content {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    padding: 0 20px; /* Espaçamento interno nas laterais */
+}
+
+.features-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #7f00ff;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    font-size: 1rem;
+    color: #333;
+}
+
+.benefits-list img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* -------------------------
+   Popular Courses Section
+------------------------- */
+.popular-courses {
+    padding: 50px 15px;
+    text-align: center;
+    background: linear-gradient(to right, #e100ff, #7f00ff);
     color: #fff;
+}
+
+.course-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px; /* Espaçamento acima dos cards */
+}
+
+.course-card {
+    background: #fff;
+    color: #7f00ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px; /* Ajuste no tamanho do card */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* -------------------------
+   Instructor Section
+------------------------- */
+.instructor {
+    text-align: center;
+    padding: 70px 20px; /* Mais espaçamento interno */
+    background-color: #f9f9f9;
+}
+
+.instructor h2 {
+    font-size: 2rem; /* Título maior */
+    color: #333;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.instructor p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px; /* Espaçamento entre o parágrafo e o botão */
+    line-height: 1.6; /* Melhor legibilidade */
+}
+
+.instructor-btn {
+    background: linear-gradient(to right, #7f00ff, #e100ff); /* Gradiente no botão */
+    color: #fff;
+    padding: 15px 30px; /* Botão maior */
+    border-radius: 30px; /* Bordas arredondadas */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra no botão */
+    transition: all 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.instructor-btn:hover {
+    background: linear-gradient(to right, #5d00cc, #b300ff); /* Cor ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    transform: translateY(-3px); /* Efeito de elevação */
+}
+
+.instructor h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px; /* Espaçamento entre os subtítulos */
+    line-height: 1.4;
+}
+
+
+/* -------------------------
+   Testimonials Section
+------------------------- */
+.testimonials {
+    padding: 50px 15px;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    color: #fff;
+    text-align: center; /* Centraliza o texto na seção */
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o título explicitamente */
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px; /* Espaçamento acima dos cards */
+}
+
+.testimonial-card {
+    background: #fff;
+    color: #7f00ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Ajuste no tamanho do card */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* -------------------------
+   Footer
+------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px; /* Mais espaçamento interno */
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 30px; /* Espaçamento abaixo da descrição */
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Formulário de Inscrição */
+footer .subscribe-form {
+    display: flex;
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center;
+    margin-bottom: 30px; /* Espaçamento abaixo do formulário */
+}
+
+footer .subscribe-form input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #555; /* Bordas mais visíveis */
+    width: 80%; /* Campo de input ocupa 80% do container */
+    max-width: 400px;
+    margin-bottom: 20px; /* Espaçamento abaixo do input */
+    font-size: 1rem;
+    background-color: #444; /* Fundo escuro para combinar com o footer */
+    color: #fff;
+}
+
+footer .subscribe-form button {
+    background: linear-gradient(to right, #7f00ff, #e100ff); /* Gradiente nos botões */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px; /* Bordas arredondadas */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px; /* Espaçamento entre os botões */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra nos botões */
+    transition: all 0.3s ease;
+}
+
+footer .subscribe-form button:hover {
+    background: linear-gradient(to right, #5d00cc, #b300ff); /* Cor ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    transform: translateY(-3px); /* Elevação ao passar o mouse */
+}
+
+/* Informações do Footer */
+footer .footer-info {
+    margin-top: 30px;
+}
+
+footer .footer-info ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaçamento maior entre os itens */
+    justify-content: center;
+    padding: 0;
+}
+
+footer .footer-info ul li {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+footer .footer-info ul li:hover {
+    color: #fff; /* Cor dos links ao passar o mouse */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* -------------------------
+   Responsividade - Telas Pequenas (até 768px)
+------------------------- */
+@media (max-width: 768px) {
+    /* Ajuste do Header */
+    .header .container {
+        flex-direction: column; /* Coloca os itens em coluna */
+        text-align: center; /* Centraliza os itens */
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Permite que os links se ajustem em linhas */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header-buttons {
+        margin-top: 15px; /* Espaçamento adicional abaixo dos links */
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.8rem; /* Tamanho menor para o título */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Tamanho menor para o texto */
+    }
+
+    .hero .btn {
+        padding: 10px 20px; /* Botão menor */
+    }
+
+    /* Trusted Brands */
+    .brand-logos {
+        flex-wrap: wrap; /* Permite que os logos ocupem várias linhas */
+        gap: 15px; /* Reduz o espaçamento entre logos */
+    }
+
+    /* Search Courses Section */
+    .search-bar-container {
+        flex-direction: column; /* Empilha o input e o botão */
+    }
+
+    .search-bar {
+        width: 90%; /* Torna o input responsivo */
+        margin-bottom: 10px; /* Espaçamento abaixo do input */
+    }
+
+    .search-btn {
+        width: 90%; /* Botão ocupa a mesma largura do input */
+    }
+
+    .features-section {
+        flex-direction: column; /* Empilha imagem e texto */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .features-content {
+        text-align: center; /* Centraliza o texto */
+        padding: 0; /* Remove padding lateral */
+    }
+
+    /* Popular Courses Section */
+    .course-list {
+        flex-wrap: wrap; /* Cards se ajustam em múltiplas linhas */
+        justify-content: center; /* Centraliza os cards */
+        gap: 15px; /* Reduz o espaçamento entre cards */
+    }
+
+    .course-card {
+        width: 90%; /* Cards ocupam quase toda a largura disponível */
+    }
+
+    /* Instructor Section */
+    .instructor {
+        padding: 50px 10px; /* Reduz o padding lateral */
+    }
+
+    /* Testimonials Section */
+    .testimonial-cards {
+        flex-wrap: wrap; /* Ajusta os cards em múltiplas linhas */
+        gap: 15px; /* Reduz o espaçamento entre os cards */
+    }
+
+    .testimonial-card {
+        width: 90%; /* Cards ocupam quase toda a largura disponível */
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 10px; /* Reduz o padding lateral */
+    }
+
+    footer .subscribe-form input,
+    footer .subscribe-form button {
+        width: 90%; /* Ocupa quase toda a largura do container */
+    }
+
+    footer .footer-info ul {
+        flex-wrap: wrap; /* Permite que os links ocupem várias linhas */
+        gap: 10px; /* Reduz o espaçamento entre os links */
+    }
+}
+
+/* -------------------------
+   Responsividade - Telas Muito Pequenas (até 480px)
+------------------------- */
+@media (max-width: 480px) {
+    /* Header */
+    .logo {
+        font-size: 1.5rem; /* Reduz o tamanho da logo */
+    }
+
+    .nav-links li a {
+        font-size: 0.9rem; /* Tamanho menor para os links */
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.5rem; /* Título menor */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Texto menor */
+    }
+
+    .hero .btn {
+        font-size: 0.9rem; /* Botão menor */
+        padding: 8px 15px;
+    }
+
+    /* Search Courses */
+    .search-bar {
+        font-size: 0.9rem; /* Tamanho menor para o texto no input */
+        padding: 8px; /* Padding reduzido */
+    }
+
+    .search-btn {
+        font-size: 0.9rem; /* Botão menor */
+        padding: 8px;
+    }
+
+    /* Footer */
+    footer h3 {
+        font-size: 1.2rem; /* Título menor no footer */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Texto menor no footer */
+    }
 }

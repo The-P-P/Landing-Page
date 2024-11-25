@@ -1,71 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviços Freelancer - Desenvolvimento Web e Projetos Personalizados">
-    <title>Serviços Freelancer</title>
+    <meta name="description" content="Transformative platform for skill development">
+    <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Freelancer</div>
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Seus projetos, minha expertise</h1>
-            <p>Desenvolvimento web e soluções personalizadas para suas necessidades.</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">WorkSphere</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#courses">Profissionais</a></li>
+                    <li><a href="#serviços">Serviços</a></li>
+                    <li><a href="#cadastre-se">Cadastre-se</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="btn sign-in">Encontre Profissionais</button>
+                <button class="btn trial">Torne-se um Parceiro</button>
+            </div>
+        </div>
+        <div class="hero">
+            <h1>Conecte-se com os Melhores Profissionais de TI</h1>
+            <p>Uma plataforma inovadora para conectar quem precisa de soluções tecnológicas a quem sabe como fazê-las acontecer.<br> Seja um aplicativo, um site, ou análise de dados, nós temos o profissional certo para você.</p>
+            <button class="btn enroll">Encontre Profissionais</button>
         </div>
     </header>
 
-    <section id="servicos" class="section">
-        <h2>Serviços</h2>
-        <div class="service">
-            <h3>Desenvolvimento de Sites</h3>
-            <p>Criação de sites profissionais, responsivos e otimizados para SEO.</p>
-        </div>
-        <div class="service">
-            <h3>Soluções em Automação</h3>
-            <p>Automação de processos administrativos e análise de dados.</p>
-        </div>
-        <div class="service">
-            <h3>Manutenção e Atualização</h3>
-            <p>Ajustes e melhorias para projetos já existentes.</p>
+    <section class="brands">
+        <div class="container">
+            <h2>Empresas e empreendedores que confiam em nossa rede de especialistas para transformar ideias em soluções reais.</h2>
+            <ul class="brand-logos">
+                <li>Duolingo</li>
+                <li>Magic Leap</li>
+                <li>Microsoft</li>
+                <li>Codecov</li>
+                <li>User Testing</li>
+            </ul>
         </div>
     </section>
 
-    <section id="projetos" class="section">
-        <h2>Projetos Anteriores</h2>
-        <div class="project">
-            <h3>Projeto 1: Landing Page</h3>
-            <p>Criação de uma landing page moderna para captação de leads.</p>
+    <section class="search-courses" id="courses">
+        <div class="container">
+            <h2>Encontre o Profissional Ideal para o Seu Projeto</h2>
+            <div class="search-bar-container">
+                <input type="text" class="search-bar" placeholder="Encontre especialistas">
+                <button class="btn search-btn">Buscar</button>
+            </div>
+            <div class="features-section">
+                <div class="features-image">
+                    <img src="https://cdn.discordapp.com/attachments/1051331857062568088/1310639769042026509/Worksphere_2.png?ex=6745f3e7&is=6744a267&hm=ee7f15d99b61462e9b3c04be88b71aafbaee0c41222ec52976f91e4ea0beb256&" alt="Students" class="features-img">
+                    <p class="image-caption">WorkSphere</p>
+                </div>
+                <div class="features-content">
+                    <h3>Busque por serviços como Desenvolvimento Web, Aplicativos Mobile, ou Análise de Dados</h3>
+                    <ul class="benefits-list">
+                        <li><span class="material-icons">engineering</span> Encontre especialistas que adaptam soluções às suas necessidades específicas.</li>
+                        <li><span class="material-icons">schedule</span> Poupe tempo filtrando e encontrando o profissional ideal em minutos.</li>
+                        <li><span class="material-icons">star</span> Acompanhe avaliações e históricos para contratar com segurança.</li>
+                        <li><span class="material-icons">build</span> De pequenos ajustes a grandes desenvolvimentos, temos o que você precisa.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h3>Projeto 2: Sistema de Automação</h3>
-            <p>Automação de relatórios financeiros utilizando Python.</p>
+    </section>
+    
+
+    <section class="popular-courses" id="serviços">
+        <div class="container">
+            <h2>Nossos Serviços Mais Procurados</h2>
+            <div class="course-list">
+                <div class="course-card">
+                    <h3>Crie sites incríveis com profissionais que entregam qualidade e performance.</h3>
+                    <p>A partir de R$1.500 - 185+</p>
+                </div>
+                <div class="course-card">
+                    <h3>Desenvolva apps funcionais e atraentes para Android e iOS.</h3>
+                    <p>A partir de R$5.000 - 120+</p>
+                </div>
+                <div class="course-card">
+                    <h3>Transforme dados em decisões com especialistas em BI e machine learning.</h3>
+                    <p>A partir de R$800 - 90+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="instructor" id="cadastre-se">
+        <div class="container">
+            <h2>É Profissional de TI? Torne-se Nosso Parceiro</h2>
+            <p>Junte-se a uma comunidade de freelancers de TI que transforma projetos em realidade. <br> Com a nossa plataforma, você ganha visibilidade, acesso a novos clientes, e ferramentas para gerenciar seu trabalho de forma eficiente.</p>
+            <button class="btn instructor-btn">Cadastre-se como Freelancer</button>
+            <h3>Foque no que você faz de melhor enquanto cuidamos da ponte com os clientes.</h3>
+            <h3>Receba pagamentos seguros e gerencie suas finanças na plataforma.</h3>
+            <h3>Acesse recursos exclusivos para aprimorar suas habilidades e expandir sua rede.</h3>
         </div>
     </section>
 
-    <section id="contato" class="section">
-        <h2>Solicite um Orçamento</h2>
-        <form id="orcamento-form">
-            <input type="text" id="nome" placeholder="Seu Nome" required>
-            <input type="email" id="email" placeholder="Seu Email" required>
-            <textarea id="mensagem" placeholder="Descreva seu projeto" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="status-msg"></p>
+    <section class="testimonials">  
+        <div class="container">
+            <h2 calss="txt_testi">O Que Nossos Usuários Estão Dizendo</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>"Contratar profissionais aqui foi simples e rápido. Meu site ficou pronto em menos de duas semanas, exatamente como eu precisava."</p>
+                    <h4>Maria Andrade</h4>
+                    <span>Empreendedora</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A plataforma me conectou com clientes incríveis e facilitou todo o processo de negociação."</p>
+                    <h4>Carlos Menezes</h4>
+                    <span>Analista de Sistemas</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2024 Freelancer. Todos os direitos reservados.</p>
+    <footer>
+        <div class="container" id="contatos">
+            <h3>Pronto para Transformar Ideias em Realidade?</h3>
+            <p>Encontre os melhores freelancers de TI ou torne-se parte dessa revolução tecnológica. Juntos, conectamos talentos a soluções.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email">
+                <button class="btn subscribe-btn">Encontre Profissionais</button>
+                <button class="btn subscribe-btn">Seja Um Parceiro</button>
+            </form>
+            <div class="footer-info">
+                <p>© 2024 Etech. All rights reserved.</p>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
